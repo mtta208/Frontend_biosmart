@@ -1,0 +1,69 @@
+.equipos-container {
+
+  padding: 20px;
+}
+
+.titulo {
+
+  font-size: 38px;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+.equipos-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+}
+
+.card-equipo {
+
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+}
+
+.card-equipo:hover {
+
+  transform: translateY(-5px);
+}
+
+.imagen-equipo {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+}
+
+.contenido {
+
+  padding: 20px;
+}
+
+.contenido h2 {
+
+  margin-bottom: 15px;
+
+  color: #0f172a;
+}
+
+.contenido p {
+
+  margin-bottom: 10px;
+
+  color: #475569;
+
+  font-size: 15px;
+}

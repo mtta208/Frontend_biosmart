@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/resultadocapacitacion";
+const URL = "http://localhost:8080/resultado_capacitacion";
 
 export async function obtenerResultados() {
   const response = await fetch(URL);
