@@ -68,7 +68,21 @@ function Login() {
 
     alert("Bienvenido");
 
-    navigate("/dashboard");
+// REDIRECCION POR ROL
+if (usuario.rol === "ADMIN") {
+
+  navigate("/dashboard");
+
+} else if (
+  usuario.rol === "PROFESOR"
+) {
+
+  navigate("/resultado");
+
+} else {
+
+  navigate("/equipos");
+}
 
   } catch (error) {
 

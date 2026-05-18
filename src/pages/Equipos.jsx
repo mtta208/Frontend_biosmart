@@ -21,22 +21,22 @@ function Equipos() {
     const imagenes = [
 
       // IMAGEN 1
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCoHL15fQsnfYS97b4pkv6wTVCZp5uvwgvvw&s",
 
       // IMAGEN 2
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb7lMLuR_bRqc0goCpk72ftaXmLRm2Ru82Yg&s",
 
       // IMAGEN 3
-      "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1200",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJzYFZs4kR8wuFnHsCIV9gURQL9ogvCF4ahA&s",
 
       // IMAGEN 4
-      "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3hiDP5B4pufCiK2KZ5mFJy1AdNahgwLc77w&s",
 
       // IMAGEN 5
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCoHL15fQsnfYS97b4pkv6wTVCZp5uvwgvvw&s",
 
       // IMAGEN 6
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200",
+      "https://images.unsplash.com/photo-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV8DVtowHz97TAkgWSp70yynDDx9EUQXLEEg&s1519389950473-47ba0277781c?q=80&w=1200",
 
     ];
 

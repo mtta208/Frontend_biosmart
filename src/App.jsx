@@ -15,9 +15,16 @@ import Capacitaciones from "./pages/Capacitaciones";
 import Examen from "./pages/Examen";
 import Resultado from "./pages/Resultados";
 
+import RutaProtegida from "./routes/RutaProtegida";
+
 function Layout() {
 
   const navigate = useNavigate();
+
+  const usuario =
+    JSON.parse(
+      localStorage.getItem("usuario")
+    );
 
   function cerrarSesion() {
 
@@ -28,7 +35,12 @@ function Layout() {
 
   return (
 
-    <div style={{ display: "flex", minHeight: "100vh" }}>
+    <div
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+      }}
+    >
 
       <aside
         style={{
@@ -50,25 +62,50 @@ function Layout() {
           }}
         >
 
-          <Link style={linkStyle} to="/dashboard">
-            Dashboard
-          </Link>
+          {/* ADMIN */}
+          {usuario?.rol === "ADMIN" && (
+            <>
+              <Link
+                style={linkStyle}
+                to="/dashboard"
+              >
+                Dashboard
+              </Link>
 
-          <Link style={linkStyle} to="/usuarios">
-            Usuarios
-          </Link>
+              <Link
+                style={linkStyle}
+                to="/usuarios"
+              >
+                Usuarios
+              </Link>
+            </>
+          )}
 
-          <Link style={linkStyle} to="/equipos">
+          {/* TODOS */}
+          <Link
+            style={linkStyle}
+            to="/equipos"
+          >
             Equipos
           </Link>
 
-          <Link style={linkStyle} to="/capacitaciones">
+          <Link
+            style={linkStyle}
+            to="/capacitaciones"
+          >
             Capacitaciones
           </Link>
 
-          <Link style={linkStyle} to="/resultado">
-            Resultado
-          </Link>
+          {/* PROFESOR Y ADMIN */}
+          {(usuario?.rol === "PROFESOR" ||
+            usuario?.rol === "ADMIN") && (
+            <Link
+              style={linkStyle}
+              to="/resultado"
+            >
+              Resultado
+            </Link>
+          )}
 
           <button
             onClick={cerrarSesion}
@@ -99,34 +136,95 @@ function Layout() {
 
         <Routes>
 
+          {/* DASHBOARD */}
           <Route
             path="/dashboard"
-            element={<Dashboard />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "ADMIN",
+                ]}
+              >
+                <Dashboard />
+              </RutaProtegida>
+            }
           />
 
+          {/* USUARIOS */}
           <Route
             path="/usuarios"
-            element={<Usuarios />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "ADMIN",
+                ]}
+              >
+                <Usuarios />
+              </RutaProtegida>
+            }
           />
 
+          {/* EQUIPOS */}
           <Route
             path="/equipos"
-            element={<Equipos />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "USUARIO",
+                  "PROFESOR",
+                  "ADMIN",
+                ]}
+              >
+                <Equipos />
+              </RutaProtegida>
+            }
           />
 
+          {/* CAPACITACIONES */}
           <Route
             path="/capacitaciones"
-            element={<Capacitaciones />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "USUARIO",
+                  "PROFESOR",
+                  "ADMIN",
+                ]}
+              >
+                <Capacitaciones />
+              </RutaProtegida>
+            }
           />
 
+          {/* EXAMEN */}
           <Route
             path="/examen"
-            element={<Examen />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "USUARIO",
+                  "PROFESOR",
+                  "ADMIN",
+                ]}
+              >
+                <Examen />
+              </RutaProtegida>
+            }
           />
 
+          {/* RESULTADOS */}
           <Route
             path="/resultado"
-            element={<Resultado />}
+            element={
+              <RutaProtegida
+                rolesPermitidos={[
+                  "PROFESOR",
+                  "ADMIN",
+                ]}
+              >
+                <Resultado />
+              </RutaProtegida>
+            }
           />
 
         </Routes>
