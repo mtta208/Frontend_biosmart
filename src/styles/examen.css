@@ -1,43 +1,44 @@
 .contenedor-examen{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+  padding:40px;
+  background:#f1f5f9;
+  min-height:100vh;
 }
 
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:30px;
+.contenedor-examen h1{
+  margin-bottom:20px;
+  color:#0f172a;
 }
 
-.timer{
-  background:#dc2626;
-  color:white;
-  padding:10px 20px;
-  border-radius:10px;
-  font-size:20px;
-}
-
-.pregunta{
+.pregunta-card{
   background:white;
   padding:20px;
+  border-radius:15px;
   margin-bottom:20px;
-  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,0.1);
 }
 
-.pregunta label{
-  display:block;
+.pregunta-card input{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+}
+
+.contenedor-examen button{
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  margin-right:10px;
   margin-top:10px;
 }
 
-.btn-finalizar{
-  width:100%;
-  padding:15px;
-  background:#2563eb;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:18px;
-  cursor:pointer;
+.contenedor-examen button:hover{
+  background:#1d4ed8;
 }

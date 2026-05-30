@@ -1,3 +1,5 @@
+/* src/styles/equipos.css */
+
 .equipos-container {
 
   padding: 20px;
@@ -8,6 +10,53 @@
   font-size: 38px;
   color: #0f172a;
   margin-bottom: 30px;
+}
+
+.formulario-equipo {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+.formulario-equipo input {
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #cbd5e1;
+
+  font-size: 15px;
+}
+
+.formulario-equipo button {
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.formulario-equipo button:hover {
+
+  background: #1d4ed8;
 }
 
 .equipos-grid {
@@ -28,7 +77,8 @@
 
   overflow: hidden;
 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.1);
 
   transition: 0.3s;
 }
@@ -66,4 +116,30 @@
   color: #475569;
 
   font-size: 15px;
+}
+
+.btn-eliminar {
+
+  margin-top: 15px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  background: #ef4444;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+
+  background: #dc2626;
 }

@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import "../styles/registro.css";
 
+
 function Registro() {
 
     const navigate = useNavigate();
